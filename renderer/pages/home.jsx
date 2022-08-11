@@ -10,7 +10,7 @@ import Queue from "../components/queue";
 function Home() {
   return (
     <>
-      <body className="grid w-full h-screen grid-cols-1 px-20 align-middle bg-base-100">
+      <body className="grid w-full h-screen grid-cols-1 align-middle ">
         <Head>
           <title>DemucsUI</title>
         </Head>

@@ -12,11 +12,14 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "@electron/remote": "^2.0.8",
     "clsx": "^1.2.1",
     "daisyui": "^2.22.0",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.0.1",
-    "python-shell": "^3.0.1"
+    "prop-types": "^15.8.1",
+    "python-shell": "^3.0.1",
+    "react-drag-reorder": "^1.2.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.2",
@@ -30,15 +33,14 @@
     "react-dom": "^18.1.0",
     "tailwindcss": "^3.0.24"
   },
-
-  "//extraResources":"This causes electron-builder to copy the contents of the python folder into <MyApp>.app/Contents/Resources/python in the packaged application.",
-      "extraResources": [
-      {
-        "from": "python",
-        "to": "python",
-        "filter": [
-          "**/*"
-        ]
-      }
-    ]
+  "//extraResources": "This causes electron-builder to copy the contents of the python folder into <MyApp>.app/Contents/Resources/python in the packaged application.",
+  "extraResources": [
+    {
+      "from": "python",
+      "to": "python",
+      "filter": [
+        "**/*"
+      ]
+    }
+  ]
 }

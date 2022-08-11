@@ -18,7 +18,7 @@ export default function UploadFile() {
   };
 
   return (
-    <>
+    <div className="sticky top-0 z-50 bg-red-700 bg-primary">
       <button
         className="w-20 btn btn-outline btn-primary"
         onClick={handleClick}
@@ -31,6 +31,6 @@ export default function UploadFile() {
         onChange={handleChange}
         style={{ display: "none" }}
       />
-    </>
+    </div>
   );
 }

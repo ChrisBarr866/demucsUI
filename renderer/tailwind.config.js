@@ -10,11 +10,14 @@ module.exports = {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
+    container: {
+      center: true,
+    },
     plugins: [require("daisyui"),
     require('@tailwindcss/forms')],
   
     daisyui: {
-      themes: ["cmyk"],
+      themes: ["light"],
     },
   }
 };

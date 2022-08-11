@@ -1,18 +1,33 @@
 import useQueue from "../hooks/useQueue";
+import { useState } from "react";
+import clsx from "clsx";
+import QueueItem from "./queueItem";
 
 export default function Queue() {
   const { queue, set, push, remove, filter, update, clear } = useQueue([
-    1, 2, 3, 4, 5, 6,
+    {
+      title: "",
+    },
+    2,
+    3,
+    4,
+    5,
+    6,
   ]);
 
   return (
     <div>
-      <div>{queue.join(", ")}</div>
-      {queue.map((item, index) => (
-        <div className="w-full bg-gray-700 bg-accent" key={index}>
-          {item}
-        </div>
-      ))}
+      <div className="grid grid-cols-1 gap-1">
+        {queue.map((item, index) => (
+          <QueueItem
+            key={index}
+            title={item.title}
+            isSelected={false}
+            handleRemove={remove(index)}
+          />
+        ))}
+      </div>
+
       <button onClick={() => push(7)}>Add 7</button>
       <button onClick={() => update(1, 9)}>Change Second Element To 9</button>
       <button onClick={() => remove(1)}>Remove Second Element</button>
